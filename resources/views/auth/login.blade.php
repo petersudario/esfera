@@ -11,23 +11,31 @@
                 <p class="mt-1 text-center text-gray-500 ">Login or create account</p>
 
                 <form method="POST" action="{{ route('login') }}">
-                    <div>
-                        <x-label for="email" value="{{ __('Email') }}" />
-                        <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                    @csrf
+
+                    <div class="relative flex items-center mt-6">
+                        <span class="absolute">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-3 text-gray-300 " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </span>
+
+                        <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" placeholder="E-mail" />
                     </div>
 
-                    <div class="mt-4">
-                        <x-label for="password" value="{{ __('Password') }}" />
-                        <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
+                    <div class="relative flex items-center mt-4">
+                        <span class="absolute">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-3 text-gray-300 " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                        </span>
+                        <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" placeholder="Password"/>
                     </div>
 
-                    <div class="flex items-center justify-between mt-4">
-                        <a href="#" class="text-sm text-gray-600 hover:text-gray-500">Forget Password?</a>
+                    <x-button class="mt-4">
+                        {{ __('Log in') }}
+                    </x-button>
 
-                        <x-button class="ml-4">
-                            {{ __('Log in') }}
-                        </x-button>
-                    </div>
                 </form>
             </div>
 
