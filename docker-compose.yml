@@ -1,0 +1,16 @@
+version: '3'
+services:
+    db:
+        image: mysql:8.0.32
+        ports:
+            - 3306:3306
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_USER: pedro
+            MYSQL_PASSWORD: pedro2023
+            MYSQL_DATABASE: esfera
+    adminer:
+        image: adminer:4.8.1
+        restart: always
+        ports:
+            - 8080:8080
