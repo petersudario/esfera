@@ -22,7 +22,7 @@ https://jetstream.laravel.com/3.x/installation.html
 > 
 > Linux ou WSL se caso Win 10/11;
 
-## Como iniciar a aplicação:
+## Como iniciar a aplicação
 > Navegue até o root directory da aplicação no terminal
 >
 > Digite o comando `composer install`
