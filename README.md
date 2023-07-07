@@ -28,6 +28,8 @@ https://jetstream.laravel.com/3.x/installation.html
 > Digite o comando `composer install`
 >
 > Digite o comando `npm install`
+>
+> Clone o arquivo `.env.example` e renomeie para `.env`. Depois, configure as opções de conexão de acordo com a configuração do container do Docker (disponiveis no arquivo docker-compose.yml). 
 > 
 > Inicie o container do Docker com: `docker-compose up -d`
 > 
