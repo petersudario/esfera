@@ -7,9 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Esta aplicação Laravel foi iniciada com o starter kit "Jetstream"
+## Esta aplicação Laravel foi iniciada com o starter kit "Jetstream" e com a biblioteca "MerakiUI"
 https://jetstream.laravel.com/3.x/installation.html
-
+https://merakiui.com
 ## Requisitos
 
 > Docker ou Docker desktop instalado;
