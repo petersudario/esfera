@@ -9,6 +9,7 @@
 
 ## Esta aplicação Laravel foi iniciada com o starter kit "Jetstream" e com a biblioteca "MerakiUI"
 https://jetstream.laravel.com/3.x/installation.html
+
 https://merakiui.com
 ## Requisitos
 
