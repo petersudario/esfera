@@ -34,20 +34,22 @@
                     </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-100 border-t border-gray-100">
+
+                    @foreach($users as $key => $user)
+
                     <tr class="hover:bg-gray-50">
                         <td class="px-6 py-4">
-                            1
+                            {{$user->id}}
                         </td>
-                        <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
-                            <div>
-                                <div class="font-medium text-gray-700">Steven Jobs</div>
-
-                            </div>
-                        </th>
                         <td class="px-6 py-4">
-                            jobs@sailboatui.com
+                            {{$user->name}}
                         </td>
-                        <td class="px-6 py-4">(41)98802-2368</td>
+                        <td class="px-6 py-4">
+                            {{$user->email}}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{$user->tel}}
+                        </td>
                         <td class="px-6 py-4">
                             <div class="flex justify-end gap-4">
                                 <a x-data="{ tooltip: 'Delete' }" href="#">
@@ -87,6 +89,7 @@
                             </div>
                         </td>
                     </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>
