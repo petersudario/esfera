@@ -14,4 +14,5 @@ Route::middleware([
 
     Route::resource('users', UserController::class);
 
+    Route::get('/users/{user}/delete', [UserController::class, 'confirmDestroy'])->name('user.confirm.delete');
 });
