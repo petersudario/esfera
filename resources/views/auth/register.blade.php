@@ -28,7 +28,15 @@
                         <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" placeholder="Username" />
                     </div>
 
-                    <div class="relative flex items-center mt-6">
+                    <div class="relative flex items-center mt-4">
+                        <span class="absolute">
+                            <x-gmdi-phone class="w-6 h-6 mx-3 text-gray-300"/>
+                        </span>
+
+                        <x-input id="tel" class="block mt-1 w-full" type="tel" name="tel" :value="old('tel')" required autofocus autocomplete="tel" placeholder="Phone Number (Max: 11 digits)" />
+                    </div>
+
+                    <div class="relative flex items-center mt-4">
                         <span class="absolute">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-3 text-gray-300 " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
