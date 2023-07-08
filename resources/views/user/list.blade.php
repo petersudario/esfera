@@ -10,12 +10,12 @@
                 <h2 class="text-lg font-medium text-gray-800">Registered users</h2>
 
                 <div class="flex items-center mt-4 gap-x-3">
-                    <button class="flex items-center justify-center w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-blue-500 rounded-lg sm:w-auto gap-x-2 hover:bg-blue-600 dark:hover:bg-blue-500 dark:bg-blue-600">
+                    <a href="{{route('users.create')}}" class="flex items-center justify-center w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-blue-500 rounded-lg sm:w-auto gap-x-2 hover:bg-blue-600 dark:hover:bg-blue-500 dark:bg-blue-600">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <span>Add user</span>
-                    </button>
+                    </a>
                 </div>
             </div>
 
@@ -47,12 +47,14 @@
                         <td class="px-6 py-4">
                             {{$user->email}}
                         </td>
+
                         <td class="px-6 py-4">
                             {{$user->tel}}
                         </td>
                         <td class="px-6 py-4">
                             <div class="flex justify-end gap-4">
-                                <a x-data="{ tooltip: 'Delete' }" href="#">
+
+                                <a x-data="{ tooltip: 'Delete' }" href="{{ route('user.confirm.delete', ['user' => $user->id]) }}">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
@@ -69,7 +71,7 @@
                                         />
                                     </svg>
                                 </a>
-                                <a x-data="{ tooltip: 'Edite' }" href="#">
+                                <a x-data="{ tooltip: 'Edit' }" href="{{ route('users.edit', ['user' => $user->id]) }}">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
