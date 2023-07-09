@@ -41,3 +41,5 @@ https://merakiui.com
 > Execute as migrations com `php artisan migrate`
 > 
 > Acesse `localhost:8000` no navegador e realize login/cadastro
+>
+> Se quiser ter informações de teste na database para testar paginação e delete, use o comando `php artisan db:seed`
