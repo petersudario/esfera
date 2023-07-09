@@ -30,7 +30,7 @@ https://merakiui.com
 >
 > Digite o comando `npm install`
 >
-> Clone o arquivo `.env.example` e renomeie para `.env`. Depois, configure as opções de conexão de acordo com a configuração do container do Docker (disponiveis no arquivo docker-compose.yml). 
+> Clone o arquivo `.env.example` e renomeie para `.env`. Depois, configure as opções de conexão de acordo com a configuração do container do Docker (disponiveis no arquivo docker-compose.yml). DB_DATABASE, DB_USERNAME E DB_PASSWORD devem ser as configurações cconstadas no arquivo do Docker.
 > 
 > Inicie o container do Docker com: `docker-compose up -d`
 > 
@@ -43,3 +43,5 @@ https://merakiui.com
 > Acesse `localhost:8000` no navegador e realize login/cadastro
 >
 > Se quiser ter informações de teste na database para testar paginação e delete, use o comando `php artisan db:seed`
+>
+> Se desejar consultar o banco de dados, pode acessar `localhost:8080` depois de iniciar o projeto, e logar o usuário da database. Este container está rodando o adminer (parecido com PhpMyAdmin) para consulta-lo.
